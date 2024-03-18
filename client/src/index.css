@@ -1,0 +1,33 @@
+/* Include Tailwind CSS base styles */
+@tailwind base;
+
+/* Include Tailwind CSS component styles */
+@tailwind components;
+
+/* Include Tailwind CSS utility styles */
+@tailwind utilities;
+
+/* Apply a global font family for all elements */
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Media query for screen width greater than or equal to 480px */
+@media screen and (min-width: 480px) {
+    /* Adjust grid layout for every 7th card to span 2 columns and 2 rows */
+    .card:nth-child(7n + 1) {
+        grid-column: auto/span 2;
+        grid-row: auto/span 2;
+    }
+}
+
+/* Styling for the scrollbar in elements with the "prompt" class in WebKit browsers */
+.prompt::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Styling for the thumb of the scrollbar in WebKit browsers */
+.prompt::-webkit-scrollbar-thumb {
+  background-color: #666e75;
+  border-radius: 5px;
+}
